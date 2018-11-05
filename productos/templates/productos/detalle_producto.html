@@ -1,0 +1,50 @@
+{% extends 'productos/index3.html' %}
+
+    {% block content %}
+
+            <table class="table table-bordered table-striped table-sm">
+                <thead>
+                    <tr>
+                        <th>Presentacion</th>
+                        <th>Fecha de vencimiento</th>
+                        <th>nombre del producto</th>
+                        <th>Marca</th>
+                        <th>Categoria</th>
+                        <th>Mantenimiento</th>
+
+
+                    </tr>
+
+                </thead>
+                <tbody>
+
+
+
+                      <td><img src="{{producto.imagen.url}}" height="200" /></td>
+                      <td>{{ producto.fecha }}</td>
+                      <td>{{ producto.nombre }}</td>
+                      <td>{{ producto.marca }}</td>
+                      <td>
+                        <ul>
+                          {% for c in producto.categorias.all %}
+                          <li>
+                            {{ c.nombre }}
+                          </li>
+  {% endfor %}
+                        </ul>
+
+                      </td>
+
+                      <td>   <a class="btn btn-secundary btn-sm" href="{% url 'editar_producto' pk=producto.pk %}">editar</a>
+                            <a class="btn btn-danger btn-sm" href="{% url 'eliminar_producto' pk=producto.pk %}">eliminar</a> </td>
+
+
+
+
+
+                  </tr>
+
+                </tbody>
+            </table>
+
+{% endblock %}

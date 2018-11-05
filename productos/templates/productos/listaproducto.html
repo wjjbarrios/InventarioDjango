@@ -1,0 +1,38 @@
+{% extends 'productos/index.html' %}
+
+    {% block content %}
+
+            <table class="table table-bordered table-striped table-sm">
+                <thead>
+                    <tr>
+
+                        <th>Fecha de vencimiento</th>
+                        <th>nombre del producto</th>
+                        <th>Descripcion</th>
+                        <th>Opciones</th>
+
+
+                    </tr>
+
+                </thead>
+                <tbody>
+                  {% for productos in producto %}
+
+
+                      <td>{{ productos.fecha }}</td>
+                      <td>{{ productos.nombre }}</td>
+                      <td>{{ productos.detalle }}</td>
+                      <td><a class="btn btn-warning btn-sm" href="{% url 'detalle_producto' pk=productos.pk %}">mostrar</a>
+
+                      </td>
+
+
+
+
+
+                  </tr>
+{% endfor %}
+                </tbody>
+            </table>
+
+{% endblock %}
