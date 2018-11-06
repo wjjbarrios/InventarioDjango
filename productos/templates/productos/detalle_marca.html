@@ -1,0 +1,37 @@
+{% extends 'productos/index7.html' %}
+
+    {% block content %}
+
+            <table class="table table-bordered table-striped table-sm">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Informacion</th>
+                        <th>Mantenimiento</th>
+
+
+                    </tr>
+
+                </thead>
+                <tbody>
+
+
+
+
+
+                      <td>{{ marca.nombre }}</td>
+                      <td>{{ marca.detalle }}</td>
+
+                      <td>   <a class="btn btn-secundary btn-sm" href="{% url 'editar_marca' pk=marca.pk %}">editar</a>
+                            <a class="btn btn-danger btn-sm" href="{% url 'eliminar_marca' pk=marca.pk %}">eliminar</a> </td>
+
+
+
+
+
+                  </tr>
+
+                </tbody>
+            </table>
+
+{% endblock %}

@@ -31,7 +31,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top"> Usuario: {{ user.username }}</a>
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">Django Inventario</a>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item mx-0 mx-lg-1">
@@ -48,9 +48,7 @@
             </li>
           </ul>
         </div>
-
-
-        </div>
+      </div>
     </nav>
 
     <!-- Header -->
@@ -66,7 +64,7 @@
     <!-- Portfolio Grid Section -->
     <section class="portfolio" id="portfolio">
       <div class="container">
-        <h2 class="text-center text-uppercase text-secondary mb-0">Productos</h2>
+        <h2 class="text-center text-uppercase text-secondary mb-0">Marcas</h2>
         <hr class="star-dark mb-5">
 
 				{% block content%}
@@ -75,28 +73,39 @@
       </div>
     </section>
 
-
-
     <!-- About Section -->
-    <section class="bg-primary text-white mb-0" id="about">
+    <section class="footer text-white mb-0" id="about">
       <div class="container">
-        <h2 class="text-center text-uppercase text-white">Central de Abastos Totonicapan</h2>
+        <h2 class="text-center text-uppercase text-white">Insertar nueva marca</h2>
         <hr class="star-light mb-5">
-        <div class="row">
-          <div class="col-lg-4 ml-auto">
-            <p class="lead">Nuestra empresa se dedica principalmente el abastecimiento de todo tipo de productos de consumo diario y para empresas medianas.</p>
-          </div>
-          <div class="col-lg-4 mr-auto">
-            <p class="lead">Nos dedicamos al control de surtido de todos los productos en mayoreo</p>
-          </div>
+        <div class="text-center mt-4">
+          <a class="btn btn-xl btn-outline-light" href="/marca/nueva/">
+            <i class="fas fa-pencil mr-2"></i>
+            Registrar
+          </a>
+        </div>
+      </div>
+    </section>
+		<!-- About Section -->
+		<section class="bg-primary text-white mb-0" id="about">
+			<div class="container">
+				<h2 class="text-center text-uppercase text-white">Central de Abastos Totonicapan</h2>
+				<hr class="star-light mb-5">
+				<div class="row">
+					<div class="col-lg-4 ml-auto">
+						<p class="lead">Nuestra empresa se dedica principalmente el abastecimiento de todo tipo de productos de consumo diario y para empresas medianas.</p>
+					</div>
+					<div class="col-lg-4 mr-auto">
+						<p class="lead">Nos dedicamos al control de surtido de todos los productos en mayoreo</p>
+					</div>
           <div class="col-lg-4 mr-auto">
             <p class="lead">con mas de 30 años de experiencia</p>
             <p class="lead">Servicio al instante</p>
           </div>
-        </div>
+				</div>
 
-      </div>
-    </section>
+			</div>
+		</section>
 
 
 
@@ -153,7 +162,6 @@
         <small>Copyright &copy; Django Inventario 2018</small>
       </div>
     </div>
-
 
     <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
     <div class="scroll-to-top d-lg-none position-fixed ">

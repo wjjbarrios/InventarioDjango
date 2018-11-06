@@ -1,0 +1,36 @@
+{% extends 'productos/index6.html' %}
+
+    {% block content %}
+
+            <table class="table table-bordered table-striped table-sm">
+                <thead>
+                    <tr>
+
+                        <th>Nombre de la marca</th>
+                        <th>Informacion de la marca</th>
+                        <th>Opciones</th>
+
+
+                    </tr>
+
+                </thead>
+                <tbody>
+                  {% for mar in marca %}
+
+
+                      <td>{{ mar.nombre }}</td>
+                      <td>{{ mar.detalle }}</td>
+                      <td><a class="btn btn-warning btn-sm" href="{% url 'detalle_marca' pk=mar.pk %}">mostrar</a>
+
+                      </td>
+
+
+
+
+
+                  </tr>
+{% endfor %}
+                </tbody>
+            </table>
+
+{% endblock %}

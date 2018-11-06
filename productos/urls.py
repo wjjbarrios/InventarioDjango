@@ -7,4 +7,11 @@ urlpatterns = [
     url(r'^producto/(?P<pk>[0-9]+)/detalle/$', views.detalle_producto, name='detalle_producto'),
     url(r'^producto/(?P<pk>[0-9]+)/eliminar/$', views.Eliminar_producto, name='eliminar_producto'),
     url(r'^producto/(?P<pk>[0-9]+)/editar/$', views.Editar_producto, name='editar_producto'),
+
+    #urls marca_nueva
+    url(r'^marca/lista/$', views.lista_marcas, name ='lista_marcas'),
+    url(r'^marca/nueva/$', views.marca_nueva, name='marca_nueva'),
+    url(r'^marca/(?P<pk>[0-9]+)/detalle/$', views.detalle_marca, name='detalle_marca'),
+    url(r'^marca/(?P<pk>[0-9]+)/eliminar/$', views.Eliminar_marca, name='eliminar_marca'),
+    url(r'^marca/(?P<pk>[0-9]+)/editar/$', views.Editar_marca, name='editar_marca'),
     ]

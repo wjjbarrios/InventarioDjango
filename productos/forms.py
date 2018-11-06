@@ -30,3 +30,20 @@ class ProductoForm(forms.ModelForm):
             'marca': forms.Select(attrs={'class': 'form-control'}),
             'categorias': forms.CheckboxSelectMultiple(),
         }
+
+class MarcaForm(forms.ModelForm):
+
+    class Meta:
+        model = Marca
+        fields = [
+            'nombre',
+            'detalle',
+        ]
+
+class CategoriaForm(forms.ModelForm):
+
+    class Meta:
+        model = Categoria
+        fields = [
+            'nombre',
+        ]
