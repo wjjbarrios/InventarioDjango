@@ -32,13 +32,14 @@
     <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
       <div class="container">
         <a class="navbar-brand js-scroll-trigger" href="#page-top">Django Inventario</a>
+
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item mx-0 mx-lg-1">
               <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{% url 'lista_productos' %}">Productos</a>
             </li>
             <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{% url 'lista_marcas' %}">Marca</a>
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/marca/lista/">Marca</a>
             </li>
             <li class="nav-item mx-0 mx-lg-1">
               <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{% url 'lista_categoria' %}">Categorias</a>
@@ -48,16 +49,13 @@
             </li>
           </ul>
         </div>
-
-
-
       </div>
     </nav>
 
     <!-- Header -->
     <header class="masthead bg-primary text-white text-center">
       <div class="container">
-        <img class="img-fluid mb-5 d-block mx-auto" src="{% static 'img/logo.png' %}" alt="">
+        <img class="img-fluid mb-5 d-block mx-auto" src="img/profile.png" alt="">
         <h1 class="text-uppercase mb-0">Sistema de gestion inventario</h1>
         <hr class="star-light">
         <h2 class="font-weight-light mb-0">Productos - Tipos - Marcas</h2>
@@ -67,104 +65,95 @@
     <!-- Portfolio Grid Section -->
     <section class="portfolio" id="portfolio">
       <div class="container">
-        <h2 class="text-center text-uppercase text-secondary mb-0">Productos</h2>
+        <h2 class="text-center text-uppercase text-secondary mb-0">Detalle de la categoria</h2>
         <hr class="star-dark mb-5">
 
-				{% block content%}
+        {% block content%}
 
-				{% endblock%}
+        {% endblock%}
       </div>
     </section>
 
-    <!-- About Section -->
-    <section class="footer text-white mb-0" id="about">
-      <div class="container">
-        <h2 class="text-center text-uppercase text-white">Insertar Nuevo Producto</h2>
-        <hr class="star-light mb-5">
-        <div class="text-center mt-4">
-          <a class="btn btn-xl btn-outline-light" href="/producto/nueva/">
-            <i class="fas fa-pencil mr-2"></i>
-            Registrar
-          </a>
-        </div>
-      </div>
-    </section>
-		<!-- About Section -->
-		<section class="bg-primary text-white mb-0" id="about">
-			<div class="container">
-				<h2 class="text-center text-uppercase text-white">Central de Abastos Totonicapan</h2>
-				<hr class="star-light mb-5">
-				<div class="row">
-					<div class="col-lg-4 ml-auto">
-						<p class="lead">Nuestra empresa se dedica principalmente el abastecimiento de todo tipo de productos de consumo diario y para empresas medianas.</p>
-					</div>
-					<div class="col-lg-4 mr-auto">
-						<p class="lead">Nos dedicamos al control de surtido de todos los productos en mayoreo</p>
-					</div>
-          <div class="col-lg-4 mr-auto">
-            <p class="lead">con mas de 30 años de experiencia</p>
-            <p class="lead">Servicio al instante</p>
-          </div>
-				</div>
-
-			</div>
-		</section>
 
 
 
-    <!-- Footer -->
-    <footer class="footer text-center">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4 mb-5 mb-lg-0">
-            <h4 class="text-uppercase mb-4">Ubicanos</h4>
-            <p class="lead mb-0">2 av 2-37 zona 2
-              <br>Totonicapan</p>
-          </div>
-          <div class="col-md-4 mb-5 mb-lg-0">
-            <h4 class="text-uppercase mb-4">nNuestras redes sociales</h4>
-            <ul class="list-inline mb-0">
-              <li class="list-inline-item">
-                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
-                  <i class="fab fa-fw fa-facebook-f"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
-                  <i class="fab fa-fw fa-google-plus-g"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
-                  <i class="fab fa-fw fa-twitter"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
-                  <i class="fab fa-fw fa-linkedin-in"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
-                  <i class="fab fa-fw fa-dribbble"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="col-md-4">
-            <h4 class="text-uppercase mb-4">Sitema de Gestion de Inventario</h4>
-            <p class="lead mb-0">Realizado por el alumno: Wilson Juan Jose Barrios Cutz, para el curso de programacion comercial
-              <a href="http://startbootstrap.com">Mesoamericana</a>.</p>
+    <!	<!-- About Section -->
+  		<section class="bg-primary text-white mb-0" id="about">
+  			<div class="container">
+  				<h2 class="text-center text-uppercase text-white">Central de Abastos Totonicapan</h2>
+  				<hr class="star-light mb-5">
+  				<div class="row">
+  					<div class="col-lg-4 ml-auto">
+  						<p class="lead">Nuestra empresa se dedica principalmente el abastecimiento de todo tipo de productos de consumo diario y para empresas medianas.</p>
+  					</div>
+  					<div class="col-lg-4 mr-auto">
+  						<p class="lead">Nos dedicamos al control de surtido de todos los productos en mayoreo</p>
+  					</div>
+            <div class="col-lg-4 mr-auto">
+              <p class="lead">con mas de 30 años de experiencia</p>
+              <p class="lead">Servicio al instante</p>
+            </div>
+  				</div>
+
+  			</div>
+  		</section>
+
+
+
+      <!-- Footer -->
+      <footer class="footer text-center">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 mb-5 mb-lg-0">
+              <h4 class="text-uppercase mb-4">Ubicanos</h4>
+              <p class="lead mb-0">2 av 2-37 zona 2
+                <br>Totonicapan</p>
+            </div>
+            <div class="col-md-4 mb-5 mb-lg-0">
+              <h4 class="text-uppercase mb-4">nNuestras redes sociales</h4>
+              <ul class="list-inline mb-0">
+                <li class="list-inline-item">
+                  <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                    <i class="fab fa-fw fa-facebook-f"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                    <i class="fab fa-fw fa-google-plus-g"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                    <i class="fab fa-fw fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                    <i class="fab fa-fw fa-linkedin-in"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                    <i class="fab fa-fw fa-dribbble"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <h4 class="text-uppercase mb-4">Sitema de Gestion de Inventario</h4>
+              <p class="lead mb-0">Realizado por el alumno: Wilson Juan Jose Barrios Cutz, para el curso de programacion comercial
+                <a href="http://startbootstrap.com">Mesoamericana</a>.</p>
+            </div>
           </div>
         </div>
-      </div>
-    </footer>
+      </footer>
 
-    <div class="copyright py-4 text-center text-white">
-      <div class="container">
-        <small>Copyright &copy; Django Inventario 2018</small>
+      <div class="copyright py-4 text-center text-white">
+        <div class="container">
+          <small>Copyright &copy; Django Inventario 2018</small>
+        </div>
       </div>
-    </div>
+
 
     <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
     <div class="scroll-to-top d-lg-none position-fixed ">

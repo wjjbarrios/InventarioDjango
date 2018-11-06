@@ -1,0 +1,34 @@
+{% extends 'productos/index8.html' %}
+
+    {% block content %}
+
+            <table class="table table-bordered table-striped table-sm">
+                <thead>
+                    <tr>
+
+                        <th>Nombre de la marca</th>
+                        <th>Opciones</th>
+
+
+                    </tr>
+
+                </thead>
+                <tbody>
+                  {% for cate in categoria %}
+
+
+                      <td>{{ cate.nombre }}</td>
+                      <td><a class="btn btn-warning btn-sm" href="{% url 'detalle_categoria' pk=cate.pk %}">mostrar</a>
+
+                      </td>
+
+
+
+
+
+                  </tr>
+{% endfor %}
+                </tbody>
+            </table>
+
+{% endblock %}

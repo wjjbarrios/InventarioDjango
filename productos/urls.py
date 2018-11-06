@@ -14,4 +14,11 @@ urlpatterns = [
     url(r'^marca/(?P<pk>[0-9]+)/detalle/$', views.detalle_marca, name='detalle_marca'),
     url(r'^marca/(?P<pk>[0-9]+)/eliminar/$', views.Eliminar_marca, name='eliminar_marca'),
     url(r'^marca/(?P<pk>[0-9]+)/editar/$', views.Editar_marca, name='editar_marca'),
+
+ #urls categoria
+    url(r'^categoria/lista/$', views.lista_categoria, name ='lista_categoria'),
+    url(r'^categoria/nueva/$', views.categoria_nueva, name='categoria_nueva'),
+    url(r'^categoria/(?P<pk>[0-9]+)/detalle/$', views.detalle_categoria, name='detalle_categoria'),
+    url(r'^categoria/(?P<pk>[0-9]+)/eliminar/$', views.Eliminar_categoria, name='eliminar_categoria'),
+    url(r'^categoria/(?P<pk>[0-9]+)/editar/$', views.Editar_categoria, name='editar_categoria'),
     ]

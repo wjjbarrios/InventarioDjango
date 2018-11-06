@@ -82,3 +82,41 @@ def Eliminar_marca(request, pk):
     marca = get_object_or_404(Marca, pk=pk)
     marca.delete()
     return redirect('lista_marcas')
+
+#vistas de Categoria
+def categoria_nueva(request):
+    if request.method == "POST":
+        formulario = CategoriaForm(request.POST)
+        if formulario.is_valid():
+            categoria = formulario.save(commit=False)
+            categoria.save()
+            return redirect('lista_categoria')
+    else:
+        formulario = CategoriaForm()
+    return render(request, 'productos/categoria_editar.html', {'formulario': formulario})
+
+def Editar_categoria(request, pk):
+    categoria = get_object_or_404(Categoria, pk=pk)
+    if request.method == 'POST':
+        formulario = CategoriaForm(request.POST, request.FILES, instance=categoria)
+        if formulario.is_valid():
+            categoria = formulario.save()
+            categoria.save()
+            return redirect('detalle_categoria', pk=categoria.pk)
+
+    else:
+        formulario = CategoriaForm(instance=categoria)
+    return render(request, 'productos/categoria_editar.html', {'formulario': formulario})
+
+def lista_categoria(request):
+    categoria = Categoria.objects.all()
+    return render(request, 'productos/listacategoria.html', {'categoria': categoria})
+
+def detalle_categoria(request, pk):
+     categoria = get_object_or_404(Categoria, pk=pk)
+     return render(request, 'productos/detalle_categoria.html', {'categoria': categoria})
+
+def Eliminar_categoria(request, pk):
+    categoria = get_object_or_404(Categoria, pk=pk)
+    categoria.delete()
+    return redirect('lista_categoria')

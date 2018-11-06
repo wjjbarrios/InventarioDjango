@@ -1,0 +1,35 @@
+{% extends 'productos/index10.html' %}
+
+    {% block content %}
+
+            <table class="table table-bordered table-striped table-sm">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Mantenimiento</th>
+
+
+                    </tr>
+
+                </thead>
+                <tbody>
+
+
+
+
+
+                      <td>{{ categoria.nombre }}</td>
+
+                      <td>   <a class="btn btn-secundary btn-sm" href="{% url 'editar_categoria' pk=categoria.pk %}">editar</a>
+                            <a class="btn btn-danger btn-sm" href="{% url 'eliminar_categoria' pk=categoria.pk %}">eliminar</a> </td>
+
+
+
+
+
+                  </tr>
+
+                </tbody>
+            </table>
+
+{% endblock %}
